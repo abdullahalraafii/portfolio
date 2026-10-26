@@ -5,376 +5,106 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abdullah Al Rafi – Biochemistry, Neurobiology and Bioinformatics</title>
 <meta name="description" content="Abdullah Al Rafi: BSc student in Biochemistry and Biotechnology at USTC. Neurobiology, bioinformatics and drug design research.">
+<meta name="theme-color" content="#a51c30">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#050716;--panel:#0d1131;--glass:rgba(16,21,58,.62);--line:#26305f;--ink:#eaedff;--mute:#9099cf;--ice:#6ff2ff;--flare:#ff5fa8;--vio:#8b7bff;--glow:rgba(111,242,255,.17);--display:'Unbounded','Trebuchet MS',sans-serif;--body:'Instrument Sans','Segoe UI',sans-serif}
-@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#eef0ff;--panel:#fff;--glass:rgba(255,255,255,.7);--line:#c7cdf6;--ink:#0b0f30;--mute:#4a5388;--ice:#0a6fd6;--flare:#d4237a;--vio:#5b46e0;--glow:rgba(10,111,214,.13)}}
-:root[data-theme=light]{--bg:#eef0ff;--panel:#fff;--glass:rgba(255,255,255,.7);--line:#c7cdf6;--ink:#0b0f30;--mute:#4a5388;--ice:#0a6fd6;--flare:#d4237a;--vio:#5b46e0;--glow:rgba(10,111,214,.13)}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{background:var(--bg);color:var(--ink);font:400 1.04rem/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--ice);outline-offset:3px;border-radius:6px}
-.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.aurora i{position:absolute;width:55vw;height:55vw;border-radius:50%;filter:blur(90px);opacity:.28;animation:drift 26s ease-in-out infinite alternate}
-.aurora i:nth-child(1){background:var(--vio);top:-18vw;left:-12vw}
-.aurora i:nth-child(2){background:var(--ice);bottom:-24vw;right:-14vw;animation-delay:-9s}
-.aurora i:nth-child(3){background:var(--flare);width:36vw;height:36vw;top:38%;left:42%;opacity:.12;animation-delay:-16s}
-@keyframes drift{to{transform:translate(8vw,6vw) scale(1.15)}}
-#net{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-nav,header,main,footer{position:relative;z-index:1}
-#bar{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,var(--ice),var(--vio),var(--flare))}
-.wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
-nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(16px);background:color-mix(in srgb,var(--bg) 66%,transparent);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;justify-content:space-between;align-items:center;height:62px;gap:1rem}
-nav b{font:500 .95rem var(--display)}
-nav ul{display:flex;gap:.2rem;list-style:none;padding:0;overflow-x:auto;scrollbar-width:none}
-nav ul a{display:block;padding:.4rem .75rem;border-radius:999px;text-decoration:none;color:var(--mute);font-weight:500;font-size:.88rem;white-space:nowrap;transition:color .2s,background .2s}
-nav ul a:hover{color:var(--ink)}
-nav ul a.on{color:var(--ink);background:var(--glow)}
-#theme{background:var(--glass);border:1px solid var(--line);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1rem;flex:none}
-.hero{min-height:92vh;display:flex;align-items:center;padding:3rem 0}
-.hero .wrap{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center}
-.hello{color:var(--mute);font-weight:500;margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
-.hello::before{content:"";width:9px;height:9px;border-radius:50%;background:#3dffa0;box-shadow:0 0 12px #3dffa0}
-.hero h1{font:700 clamp(2.4rem,6.6vw,5rem)/1.02 var(--display);letter-spacing:-.035em;background:linear-gradient(100deg,var(--ink) 20%,var(--ice) 60%,var(--flare));-webkit-background-clip:text;background-clip:text;color:transparent}
-.line{margin-top:1.3rem;font-size:clamp(1.1rem,2.2vw,1.45rem);font-weight:500}
-.typed{color:var(--ice);border-right:2px solid var(--ice);padding-right:3px}
-.aff{color:var(--mute);margin-top:.4rem}
-.pitch{max-width:54ch;color:var(--mute);margin:1.2rem 0 1.8rem}
-.links{display:flex;flex-wrap:wrap;gap:.6rem}
-.btn{display:inline-block;padding:.62rem 1.15rem;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(8px);transition:transform .2s,border-color .2s,box-shadow .2s}
-.btn.main{background:linear-gradient(100deg,var(--ice),var(--vio));color:#050716;border-color:transparent;box-shadow:0 0 30px var(--glow)}
-.btn:hover{transform:translateY(-2px);border-color:var(--ice)}
-.photo{position:relative;width:clamp(210px,27vw,330px);aspect-ratio:1}
-.photo::before{content:"";position:absolute;inset:-16px;border-radius:50%;background:conic-gradient(from 0deg,var(--ice),var(--vio),var(--flare),var(--ice));filter:blur(22px);opacity:.6;animation:spin 14s linear infinite}
-.photo::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px dashed var(--ice);opacity:.55;animation:spin 40s linear infinite reverse}
-.photo img,.photo .ini{position:relative;z-index:1;width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid var(--bg);background:var(--panel)}
-.photo .ini{display:grid;place-items:center;font:700 3.4rem var(--display);color:var(--ice)}
-.chip{position:absolute;z-index:2;padding:.35rem .8rem;border-radius:999px;font-size:.8rem;font-weight:600;background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--line);animation:float 6s ease-in-out infinite alternate}
-.chip:nth-of-type(1){top:6%;left:-18%}.chip:nth-of-type(2){bottom:16%;left:-24%;animation-delay:-2s}.chip:nth-of-type(3){top:34%;right:-20%;animation-delay:-4s}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes float{to{transform:translateY(-10px)}}
-.marq{border-block:1px solid var(--line);background:var(--glass);backdrop-filter:blur(8px);overflow:hidden;padding:.9rem 0}
-.marq div{display:flex;gap:3rem;width:max-content;animation:scroll 40s linear infinite;color:var(--mute);font:500 .95rem var(--display)}
-.marq span::after{content:"✦";margin-left:3rem;color:var(--flare)}
-@keyframes scroll{to{transform:translateX(-50%)}}
-section{padding:5rem 0}
-h2{font:500 clamp(1.45rem,3.2vw,2.1rem)/1.15 var(--display);letter-spacing:-.02em;margin-bottom:.6rem}
-.sub{color:var(--mute);margin-bottom:2.2rem;max-width:62ch}
-.about{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:start}
-.about p{color:var(--mute)}.about p+p{margin-top:1rem}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.stat{padding:1.3rem;border-radius:20px;background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--line)}
-.stat:first-child{grid-column:span 2;background:linear-gradient(130deg,var(--glow),transparent),var(--glass)}
-.stat strong{display:block;font:500 2.1rem/1.1 var(--display);color:var(--ice)}
-.stat span{color:var(--mute);font-size:.9rem}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.1rem}
-.card{position:relative;display:flex;flex-direction:column;gap:.65rem;padding:1.5rem;background:var(--glass);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:22px;text-decoration:none;overflow:hidden;transition:border-color .25s,transform .25s}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(340px circle at var(--mx,50%) var(--my,0%),var(--glow),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
-.card:hover{border-color:var(--ice)}.card:hover::before{opacity:1}
-a.card:hover{transform:translateY(-3px)}
-.card>*{position:relative}
-.card h3{font:500 .98rem/1.4 var(--display)}
-.card p,.card li{color:var(--mute);font-size:.95rem}
-.card ul{padding-left:1.1rem;display:grid;gap:.3rem}
-.when{color:var(--flare);font-weight:600;font-size:.85rem}
-.tags{display:flex;flex-wrap:wrap;gap:.4rem}
-.tags i{font-style:normal;font-size:.79rem;padding:.2rem .65rem;border:1px solid var(--line);border-radius:999px;color:var(--mute)}
-.lk{display:flex;flex-wrap:wrap;gap:.8rem;font-size:.88rem;font-weight:600}.lk a{color:var(--ice)}
-.meta{display:flex;gap:1rem;font-size:.86rem;color:var(--mute)}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--flare);margin-right:.4rem}
-.tools{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.3rem}
-.tools input,.tools select{background:var(--glass);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:.7rem 1rem;font:inherit;font-size:.95rem}
-.tools input{flex:1;min-width:200px}
-.pub{display:grid;grid-template-columns:96px 1fr;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--line)}
-.pub .yr{font:500 .85rem var(--display);color:var(--ice);padding-top:.2rem}
-.pub h3{font:600 1.05rem/1.4 var(--body)}
-.pub h3 a{text-decoration:none}.pub h3 a:hover{color:var(--ice)}
-.pub .au{color:var(--mute);font-size:.94rem}.pub .au b{color:var(--ink)}
-.pub .ve{font-size:.94rem;font-style:italic}
-.tg{display:inline-block;margin:.1rem .5rem 0 0;font-size:.74rem;font-style:normal;font-weight:600;padding:.1rem .6rem;border:1px solid var(--flare);color:var(--flare);border-radius:999px}
-.tg.ok{border-color:#3dffa0;color:#3dffa0}.tg.sub2{border-color:var(--vio);color:var(--vio)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.tl{position:relative;padding-left:1.8rem;border-left:1px solid var(--line);display:grid;gap:1.7rem}
-.tl>div{position:relative}
-.tl>div::before{content:"";position:absolute;left:calc(-1.8rem - 5px);top:.6rem;width:9px;height:9px;border-radius:50%;background:var(--ice);box-shadow:0 0 12px var(--ice)}
-.tl small{color:var(--flare);font-weight:600}
-.tl h3{font:600 1.06rem/1.4 var(--body)}.tl p,.tl li{color:var(--mute);font-size:.95rem}
-.tl ul{padding-left:1.1rem;margin-top:.3rem;display:grid;gap:.15rem}
-.gpa{display:flex;align-items:flex-end;gap:.8rem;height:130px;margin-top:.6rem}
-.gpa div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:.3rem;height:100%;font-size:.82rem;color:var(--mute)}
-.gpa em{display:block;width:100%;max-width:46px;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,var(--ice),var(--vio));font-style:normal}
-.gpa b{color:var(--ink);font-size:.85rem}
-.lang{display:grid;gap:.45rem;font-size:.88rem;color:var(--mute)}
-.lang div{display:grid;grid-template-columns:130px 1fr;align-items:center;gap:.6rem}
-.seg{display:flex;gap:3px}.seg i{height:7px;flex:1;border-radius:4px;background:var(--line)}.seg i.f{background:linear-gradient(90deg,var(--ice),var(--vio))}
-.list{list-style:none;padding:0;display:grid;gap:.9rem}
-.contact{text-align:center}.contact .sub{margin-inline:auto}.contact .links{justify-content:center}
-.big{font:500 clamp(1.1rem,3vw,1.6rem) var(--display);text-decoration:none;color:var(--ice);word-break:break-all;display:inline-block;margin-bottom:1.6rem}
-footer{padding:2rem 0;text-align:center;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
-.note{color:var(--mute);font-size:.9rem;margin-top:1rem}
-#top{position:fixed;right:1.2rem;bottom:1.2rem;z-index:10;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);color:var(--ink);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s}
-#top.show{opacity:1;pointer-events:auto}
-@media(max-width:860px){.hero .wrap,.about,.two{grid-template-columns:1fr}.photo{width:210px;order:-1;margin:1rem 0 0 1.4rem}.chip{display:none}.pub{grid-template-columns:1fr;gap:.2rem}.hero{padding-top:1.5rem}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="bar"></div>
-<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-<canvas id="net" aria-hidden="true"></canvas>
+<a class="skip" href="#about">Skip to content</a>
+<div id="bar" aria-hidden="true"></div>
 
-<nav><div class="wrap"><b id="brand">AR</b>
-<ul id="menu"></ul>
-<button id="theme" aria-label="Switch light or dark theme">◐</button></div></nav>
-
-<header class="hero"><div class="wrap">
-  <div>
-    <div class="hello" id="hello"></div>
-    <h1 id="hname"></h1>
-    <p class="line" id="line"></p>
-    <p class="aff" id="aff"></p>
-    <p class="pitch" id="pitch"></p>
-    <div class="links" id="heroLinks"></div>
+<nav id="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="brand" href="#top-anchor" id="brand">Abdullah Al Rafi</a>
+    <ul id="menu"></ul>
+    <div class="nav-tools">
+      <button id="theme" type="button" aria-label="Switch light or dark theme">◐</button>
+      <button id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <div class="photo" id="photo"><span class="chip">Neurobiology</span><span class="chip">Bioinformatics</span><span class="chip">Drug design</span></div>
-</div></header>
-<div class="marq" aria-hidden="true"><div id="marq"></div></div>
+</nav>
+
+<header class="hero" id="top-anchor">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="eyebrow" id="hello"></p>
+      <h1 id="hname"></h1>
+      <p class="role" id="line"></p>
+      <p class="aff" id="aff"></p>
+      <p class="pitch" id="pitch"></p>
+      <div class="links" id="heroLinks"></div>
+    </div>
+    <figure class="photo" id="photo"></figure>
+  </div>
+</header>
 
 <main>
 <section id="about"><div class="wrap about">
-  <div><h2>About</h2><div id="bio"></div></div>
-  <div class="stats" id="stats"></div>
+  <div class="reveal"><p class="kicker">01 · Profile</p><h2>About</h2><div class="prose" id="bio"></div></div>
+  <div class="stats reveal" id="stats"></div>
 </div></section>
 
-<section id="research"><div class="wrap"><h2>Research</h2><p class="sub">Areas I work in and the projects running right now.</p>
-  <div class="grid" id="interests"></div>
-  <h2 style="margin-top:3.5rem;font-size:1.3rem">Current projects</h2>
-  <div class="grid" id="projects" style="margin-top:1.2rem"></div>
+<section id="research" class="alt"><div class="wrap">
+  <div class="reveal"><p class="kicker">02 · Research</p><h2>Research interests</h2><p class="sub">Areas I work in and the projects running right now.</p></div>
+  <div class="grid reveal" id="interests"></div>
+  <h3 class="subhead reveal">Current projects</h3>
+  <div class="grid reveal" id="projects"></div>
 </div></section>
 
-<section id="pubs"><div class="wrap"><h2>Publications</h2><p class="sub">Preprints, manuscripts under review and work in preparation.</p>
-  <div class="tools"><input id="q" type="search" placeholder="Search title, author or journal" aria-label="Search publications"><select id="ty" aria-label="Filter by status"></select></div>
-  <div id="pubList"></div><p class="note" id="pubCount"></p>
+<section id="pubs"><div class="wrap">
+  <div class="reveal"><p class="kicker">03 · Scholarship</p><h2>Publications</h2><p class="sub">Preprints, manuscripts under review and work in preparation.</p></div>
+  <div class="tools reveal"><input id="q" type="search" placeholder="Search title, author or journal" aria-label="Search publications"><select id="ty" aria-label="Filter by status"></select></div>
+  <div id="pubList"></div><p class="note" id="pubCount" aria-live="polite"></p>
 </div></section>
 
-<section id="path"><div class="wrap two">
-  <div><h2>Education</h2><div class="tl" id="edu"></div>
-    <h3 style="margin:2rem 0 .2rem;font:600 1rem var(--body)">Semester GPA at USTC</h3><div class="gpa" id="gpa"></div></div>
-  <div><h2>Experience</h2><div class="tl" id="exp"></div></div>
+<section id="path" class="alt"><div class="wrap">
+  <p class="kicker reveal">04 · Background</p>
+  <div class="two">
+    <div class="reveal"><h2>Education</h2><div class="tl" id="edu"></div>
+      <h3 class="subhead small">Semester GPA at USTC</h3><div class="gpa" id="gpa"></div></div>
+    <div class="reveal"><h2>Experience</h2><div class="tl" id="exp"></div></div>
+  </div>
 </div></section>
 
-<section id="conf"><div class="wrap"><h2>Conferences and seminars</h2><p class="sub">Posters and talks presented under the supervision of Dr. Mohammad Shahangir Biswas, PhD.</p><div class="grid" id="confGrid"></div></div></section>
-
-<section id="awards"><div class="wrap"><h2>Honours and awards</h2><div class="grid" id="awardGrid" style="margin-top:1.6rem"></div></div></section>
-
-<section id="learn"><div class="wrap"><h2>Licenses and certifications</h2><div class="grid" id="certGrid" style="margin-top:1.6rem"></div></div></section>
-
-<section id="skills"><div class="wrap two">
-  <div><h2>Skills</h2><div class="tags" id="skillTags" style="margin:1.4rem 0 2.2rem"></div>
-    <h3 style="margin-bottom:.8rem;font:600 1rem var(--body)">Languages</h3><p class="note" id="mother" style="margin:0 0 .8rem"></p><div class="lang" id="langs"></div></div>
-  <div><h2>Networks and memberships</h2><div class="grid" id="member" style="margin-top:1.6rem;grid-template-columns:1fr"></div></div>
+<section id="conf"><div class="wrap">
+  <div class="reveal"><p class="kicker">05 · Presentations</p><h2>Conferences and seminars</h2><p class="sub">Posters and talks presented under the supervision of Dr. Mohammad Shahangir Biswas, PhD.</p></div>
+  <div class="grid reveal" id="confGrid"></div>
 </div></section>
 
-<section id="code" hidden><div class="wrap"><h2>Code, live from GitHub</h2><div class="grid" id="repos" style="margin-top:1.6rem"></div><p class="note" id="rnote"></p></div></section>
+<section id="awards" class="alt"><div class="wrap">
+  <div class="reveal"><p class="kicker">06 · Recognition</p><h2>Honours and awards</h2></div>
+  <div class="grid reveal" id="awardGrid"></div>
+</div></section>
 
-<section id="contact" class="contact"><div class="wrap">
+<section id="learn"><div class="wrap">
+  <div class="reveal"><p class="kicker">07 · Training</p><h2>Licenses and certifications</h2></div>
+  <div class="grid reveal" id="certGrid"></div>
+</div></section>
+
+<section id="skills" class="alt"><div class="wrap">
+  <p class="kicker reveal">08 · Capabilities</p>
+  <div class="two">
+    <div class="reveal"><h2>Skills</h2><div class="tags big-tags" id="skillTags"></div>
+      <h3 class="subhead small">Languages</h3><p class="note" id="mother"></p><div class="lang" id="langs"></div></div>
+    <div class="reveal"><h2>Networks and memberships</h2><div class="grid one" id="member"></div></div>
+  </div>
+</div></section>
+
+<section id="code" hidden><div class="wrap"><h2>Code, live from GitHub</h2><div class="grid" id="repos"></div><p class="note" id="rnote"></p></div></section>
+
+<section id="contact" class="contact"><div class="wrap reveal">
+  <p class="kicker">09 · Contact</p>
   <h2>Let’s collaborate</h2><p class="sub" id="cta"></p>
   <a class="big" id="bigmail" href="#"></a><div class="links" id="contactLinks"></div>
 </div></section>
 </main>
+
 <footer><div class="wrap">© <span id="yr"></span> Abdullah Al Rafi · Chattogram, Bangladesh</div></footer>
-<button id="top" aria-label="Back to top">↑</button>
+<button id="top" type="button" aria-label="Back to top">↑</button>
 
-<script>
-/* ======================== EDIT EVERYTHING HERE ======================== */
-const CONFIG={
- name:"Abdullah Al Rafi", authorName:"Abdullah Al Rafi", photo:"profile.jpg",
- github:"",                      // add your GitHub username to show a live code section
- cv:"",                          // e.g. "cv.pdf" (upload it next to index.html) to show a Download CV button
- email:"abdullahalrafi.ustc@gmail.com",
- social:[{label:"LinkedIn",url:"https://www.linkedin.com/in/abdullahalraafi/"},{label:"Blog",url:"https://abdullah-rafi.blogspot.com/"}],
- role:"Researcher in Biochemistry and Biotechnology",
- affiliation:"University of Science and Technology Chittagong (USTC), Bangladesh",
- words:["neurobiology","bioinformatics","drug design","neuroinflammation"],
- pitch:"I aim to contribute to innovative healthcare solutions through research, collaboration and science communication.",
- bio:["I am Abdullah Al Rafi, a Bachelor of Science student and researcher in Biochemistry and Biotechnology at the University of Science and Technology Chittagong (USTC). My research interests lie in neurobiology, bioinformatics and drug design, with a strong aspiration to contribute to innovative healthcare solutions.","Alongside my studies, I actively engage in global scientific communities, sustainability leadership and science communication, reflecting my commitment to research, collaboration and social impact."],
- marquee:["Neurobiology","Neuroinflammation","Bioinformatics","Computer-aided drug design","Public health data","Science communication","Leadership"],
- interests:[
-  {title:"Neurobiology",text:"Neuroinflammation, microglia–astrocyte crosstalk, neurodegeneration and heavy-metal neurotoxicity.",tags:["Microglia","Astrocytes","Cytokines","Neurodegeneration"]},
-  {title:"Bioinformatics and drug design",text:"AI-assisted computational drug discovery and computer-aided drug design (CADD).",tags:["CADD","AI","Bromodomains","Leukemia"]},
-  {title:"Disease burden and data analysis",text:"Data-driven trend analysis and forecasting of cancer and diabetes in Bangladesh.",tags:["Epidemiology","Forecasting","Public health"]}],
- projects:[
-  {when:"30/04/2026 – current",kind:"Wet lab",title:"Diuretic activity of Lasia spinosa extract in experimental animal models",who:"Supervised by Dr. Mohammad Shahangir Biswas"},
-  {when:"01/03/2026 – current",kind:"Dry lab",title:"AI for computational drug discovery: CBP/p300 bromodomain–Y16515 interactions in acute myeloid leukemia therapy",who:"Supervised by Dr. Rasel A. AlAmin"}],
- publications:[
-  {when:"2025",status:"Preprint",kind:"Research article",title:"Trends and Burden of Breast and Cervical Cancer in Bangladesh: A Data-Driven Analysis and Future Outlook",authors:"Abdullah Al Rafi, Kashefatun Nur Orni, Tasnuba Ashraf Subah, Saima Akther, Ankita Acharjee, Imran Al Zuhayr, Debabrata Mallick",venue:"medRxiv 2025.12.05.25341679",link:"https://doi.org/10.64898/2025.12.05.25341679"},
-  {when:"2025",status:"Preprint",kind:"Research article",title:"The Diabetes Epidemic in Bangladesh: Trends and Forecasts (2000 to 2050)",authors:"Jannatul Nayma Eshita, Abu Bakar Al Mizan, Istekab Bin Yousuf, Tazeen Tarannum Sadia, Sidratul Muntaha, Sumaia Alam, Abdullah Al Rafi, Debabrata Mallick",venue:"medRxiv 2025.12.25.25342994",link:"https://doi.org/10.64898/2025.12.25.25342994"},
-  {when:"Submitted",status:"Submitted",kind:"Book chapter",title:"Lead-Induced Cognitive Dysfunction",authors:"",venue:"Submitted to Bentham Science Publishers"},
-  {when:"Submitted",status:"Submitted",kind:"Review article",title:"Nanoformulation-Based Therapeutic Strategies of Natural Products in Esophageal Cancer Chemoresistance and Associated Challenges",authors:"",venue:"Submitted to Nanomedicine: Nanotechnology, Biology, and Medicine"},
-  {when:"Submitted",status:"Submitted",kind:"Review article",title:"Heavy Metals and Neurodegeneration: Mechanisms, Implications, and Therapeutic Perspectives",authors:"",venue:"Submitted to IBRO Neuroscience Reports"},
-  {when:"In preparation",status:"In preparation",kind:"Review article",title:"Emerging Insights into Neuroinflammation in Cerebrovascular Diseases: The Role of Microglia, Astrocytes, and Cytokine Cascades",authors:"",venue:"Supervised by Dr. Mohammad Shahangir Biswas"},
-  {when:"In preparation",status:"In preparation",kind:"Review article",title:"Recent Advances in the Diagnosis and Management of Neurodegenerative Diseases",authors:"",venue:"Supervised by Dr. Mohammad Shahangir Biswas"}],
- education:[
-  {when:"01/01/2024 – current",title:"BSc in Biochemistry and Biotechnology",place:"University of Science and Technology Chittagong, Chattogram",detail:"CGPA 3.60 / 4.00 (average of semesters 1–4). EQF level 6.",link:"https://ustc.ac.bd/"},
-  {when:"01/06/2019 – 01/06/2021",title:"Higher School Certificate (HSC), Science",place:"Islamia University College Chittagong",detail:"GPA 4.75. EQF level 4."},
-  {when:"Secondary",title:"Secondary School Certificate (SSC), Science",place:"Chittagong Government High School",detail:"GPA 4.67. EQF level 2."}],
- gpa:[["1st",3.75],["2nd",3.75],["3rd",3.63],["4th",3.29]],
- experience:[
-  {when:"10/2025 – current",title:"Cambridge Academic Panel Member",place:"Cambridge University Press & Assessment, UK",items:["Research and user-experience activities to improve products for researchers and authors.","Insights on academic publishing, Open Access challenges and research support tools.","Monthly surveys, feedback sessions and community discussions under ethical guidelines."]},
-  {when:"09/2025 – current",title:"Public Relationship Officer (PRO)",place:"BBTech Journal Club, USTC",items:["Manage the club’s public image through social media and outreach.","Coordinate collaborations with academic and research organisations.","Promote scientific events, seminars and publications; create media content for science outreach."]},
-  {when:"09/2025 – current",title:"Young Campus Ambassador 2025",place:"BioLuster Research Center Ltd, Dhaka",items:["Promote research awareness and bridge BioLuster initiatives with campus communities.","Lead science-focused activities and inspire peers."]},
-  {when:"01/2025 – 06/2025",title:"Executive Member",place:"BBTech Science Club, USTC",items:["Planned and organised science and technology events and workshops.","Supported strategic planning of student-led initiatives."],link:"https://www.facebook.com/bbtechscienceclub"},
-  {when:"01/2025 – current",title:"UPG Champion",place:"United People Global, Geneva, Switzerland",items:["Advocate for sustainability, social impact and innovation.","Lead global community projects with international changemakers."],link:"https://unitedpeople.global/"},
-  {when:"07/2024 – 11/2024",title:"Four-month Internship on Leadership",place:"Aspire Institute Inc.",items:["Programme on strategic decision-making, teamwork and leadership.","Executed practical leadership projects in communication and collaboration."],link:"https://www.aspireleaders.org/"}],
- conferences:[
-  {when:"25 Apr 2026",title:"6th International Young Biotechnologist Congress 2026 & Future Biotechnologists Summit 2026",place:"Nabab Nawab Ali Chowdhury Senate Bhaban, University of Dhaka",posters:["Role of Neuroinflammation in Brain Tumor Progression: Microglia–Astrocyte Crosstalk as a Therapeutic Target","Neuroinflammation in Cerebrovascular Diseases: The Role of Microglia, Astrocytes, and Cytokine Cascades"]},
-  {when:"24 Apr 2026",title:"2nd National Youth Cancer Congress 2026",place:"Bishwo Shahitto Kendro, Dhaka",posters:["Role of Neuroinflammation in Brain Tumor Progression: Microglia–Astrocyte Crosstalk as a Therapeutic Target"]},
-  {when:"31 Jan 2026",title:"Scholars’ Convergence: Research & Innovation Summit 2026",place:"Chittagong University",posters:["Recent Advances in the Diagnosis and Management of Neurodegenerative Diseases"]},
-  {when:"19 Dec 2025",title:"1st International Conference on Life and Earth Sciences for Sustainable Development (ICLESSD-2025)",place:"Jagannath University, Dhaka",posters:["Recent Advances in the Diagnosis and Management of Neurodegenerative Diseases"],note:"Plenary, scientific and poster sessions across biochemistry, genomics and bioinformatics, microbiome and public health, genetic engineering, pharmaceutical sciences and sustainability.",link:"https://lnkd.in/g6eH8Fxv"},
-  {when:"14–15 Nov 2025",title:"2nd International Conference on Recent Advances in Science and Technology (ICRAST 2025)",place:"University of Rajshahi",posters:["Neuroinflammation in Cerebrovascular Diseases: The Role of Microglia, Astrocytes, and Cytokine Cascades"],note:"Engaged with national and international researchers; discussed neuroinflammatory mechanisms and therapeutic implications.",link:"https://lnkd.in/gnBGSKdy"},
-  {when:"26–27 Sep 2025",title:"6th International Conference on Biotechnology in Health and Agriculture (ICBHA 2025)",place:"Sher-e-Bangla Agricultural University, Dhaka",posters:["Emerging Insights into Neuroinflammation in Cerebrovascular Diseases: The Role of Microglia, Astrocytes, and Cytokine Cascades"],note:"Insights into genome editing, cancer biology, bioinformatics and environmental biotechnology.",link:"https://lnkd.in/gDeVJtNV"},
-  {when:"25 Sep 2025",title:"CEAB–CCRTB International Conference 2025 (UNESCO Participation Program 2024–25)",place:"Nabab Nawab Ali Chowdhury Senate Bhaban, University of Dhaka",posters:["Emerging Insights into Neuroinflammation in Cerebrovascular Diseases"],link:"https://lnkd.in/gZgutyxm"},
-  {when:"24 Aug 2025",title:"World DNA Day 2025, BBTech Science Club",place:"USTC, Chattogram",posters:["Oral and poster presentations"],note:"Built skills in audience engagement, visual aids and concise poster design.",link:"https://lnkd.in/gb8wuHKd"},
-  {when:"7–8 Feb 2025",title:"1st National Youth Cancer Congress 2025",place:"Bishwo Shahitto Kendro, Dhaka",posters:[],note:"Sessions on cancer prevention, treatment and research; strengthened understanding of cancer care in Bangladesh.",link:"https://lnkd.in/gT-c3-U9"}],
- awards:[
-  {when:"10 Nov 2025",title:"Champion, USTC Central Debate Competition 2025",text:"Awarded the Champion’s Crest by Vice-Chancellor Professor Dr. Mohammed Solaiman for outstanding team debate performance.",links:[["Post 1","https://www.facebook.com/share/p/1Buwf6e6sY/"],["Post 2","https://www.facebook.com/share/p/1MPU6HVyhB/"],["Post 3","https://www.facebook.com/share/p/1Cx3UNtb7w/"]]},
-  {when:"Sep 2025",title:"Certificate of Appreciation, BBTech Journal Club, USTC",text:"Recognised for service as Public Relationship Officer, promoting scientific discussion, communication and collaboration.",links:[["Certificate","https://lnkd.in/gSnqg6mX"]]},
-  {when:"Jun 2024",title:"1st Place, Essay Competition, Biology Faculty Co-curricular Society (BFCS), CU",text:"Event: Clean Energy: Innovation for a Brighter Tomorrow. Theme: Sundarbans Restoration, a Bangladesh perspective.",links:[["Certificate","https://lnkd.in/gtCSxZ6x"]]}],
- certs:[
-  {when:"11/2024",title:"Basic Molecular Biology Modules 3 & 4: Nucleic Acid Extraction; PCR & Real-Time PCR",org:"Centers for Disease Control and Prevention"},
-  {when:"11/2024",title:"Fully funded International Genomics and Bioinformatics Bootcamp",org:"Genomac Institute Inc."},
-  {when:"2025",title:"Basic Research Training in Computer-Aided Drug Design & Publication",org:"CADD Lab, GSTU"},
-  {when:"10 May 2024",title:"Workshop on Bioinformatics and Computer-Aided Drug Design (CADD)",org:"BioPc, a Bioinformatics Lab of Research and Training"},
-  {when:"5 Apr 2024",title:"Workshop on Bioinformatics: Bridging Science and Computer",org:"BioChemix Club, RU"},
-  {when:"2025",title:"Advanced Training: Methods in Health Research & Ethics",org:"Global-ALT"},
-  {when:"11/2024 – 11/2025",title:"Infection prevention and control measures in health-care settings for Ebola or Marburg disease outbreaks",org:"World Health Organization"},
-  {when:"2024",title:"Pandemic Planning: Getting “PRET” for the Next Pandemic",org:"World Health Organization"},
-  {when:"2024",title:"Clinical Microbiology Virtual Journal Club Webinars",org:"American Society for Microbiology"}],
- memberships:[
-  ["American Society for Microbiology (ASM)","Washington, DC, USA · since 04/2024"],["Microbiology Society","United Kingdom · since 03/2025"],
-  ["British Society for Immunology (BSI)","London, UK · since 01/2025"],["American Chemical Society (ACS)","Washington, DC, USA · since 12/2024"],
-  ["Royal Society of Chemistry (RSC)","United Kingdom · since 12/2024"],["German Chemical Society (GDCh)","Frankfurt am Main, Germany · since 01/2025"],
-  ["Royal Microscopical Society (RMS)","Oxford, UK · since 02/2025"],["Australasian Association for Clinical Biochemistry and Laboratory Medicine (AACB)","Alexandria NSW, Australia · since 12/2024"]],
- skills:["Leadership","Community education","Leadership development","Sustainable development","Community project management","Global networking","Science communication","Scientific writing","Poster presentation","Microsoft Office","Microsoft Word"],
- mother:"Mother tongue: Bengali",
- cols:["Listening","Reading","Spoken production","Spoken interaction","Writing"],
- languages:[["English",["C1","B2","B2","B2","B2"]],["Hindi",["C1","A1","B2","C1","A1"]]],
- cta:"I welcome research collaborations, mentoring conversations and invitations to speak or contribute.",
- maxRepos:6
-};
-/* ====================================================================== */
-const $=id=>document.getElementById(id), C=CONFIG;
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const ext=u=>/^http/.test(u)?' target="_blank" rel="noopener"':"";
-const ini=C.name.split(" ").map(w=>w[0]).join("").slice(0,2).toUpperCase();
-const A=(l,u,m)=>`<a class="btn${m?" main":""}" href="${esc(u)}"${ext(u)}>${esc(l)}</a>`;
-
-document.title=C.name+" – Neurobiology, Bioinformatics, Biotechnology";
-$("brand").textContent=ini; $("yr").textContent=new Date().getFullYear();
-$("hello").textContent="Open to research collaborations";
-$("hname").textContent=C.name;
-$("line").innerHTML=esc(C.role)+" exploring <span class='typed' id='typed'>&nbsp;</span>";
-$("aff").textContent=C.affiliation; $("pitch").textContent=C.pitch;
-$("bio").innerHTML=C.bio.map(p=>`<p>${esc(p)}</p>`).join("");
-
-/* menu */
-const secs=[["about","About"],["research","Research"],["pubs","Publications"],["path","Experience"],["conf","Conferences"],["awards","Awards"],["learn","Training"],["skills","Skills"],["contact","Contact"]];
-$("menu").innerHTML=secs.map(s=>`<li><a href="#${s[0]}">${s[1]}</a></li>`).join("");
-
-/* hero + contact buttons */
-$("heroLinks").innerHTML=[C.cv&&A("Download CV",C.cv,1),A("Email me","mailto:"+C.email,!C.cv),...C.social.map(s=>A(s.label,s.url))].filter(Boolean).join("");
-$("bigmail").href="mailto:"+C.email; $("bigmail").textContent=C.email; $("cta").textContent=C.cta;
-$("contactLinks").innerHTML=[...C.social.map(s=>A(s.label,s.url)),C.github&&A("GitHub","https://github.com/"+C.github),C.cv&&A("Download CV",C.cv)].filter(Boolean).join("");
-
-/* marquee */
-$("marq").innerHTML=[...C.marquee,...C.marquee].map(t=>`<span>${esc(t)}</span>`).join("");
-
-/* photo fallbacks: local file, GitHub avatar, initials */
-(function(){const box=$("photo"),img=new Image();img.alt=C.name+" portrait";let i=0;
- const s=[C.photo,C.github&&"https://github.com/"+C.github+".png?size=400"].filter(Boolean);
- img.onerror=()=>{i++;if(i<s.length)img.src=s[i];else{img.remove();box.insertAdjacentHTML("afterbegin",`<div class="ini">${ini}</div>`)}};
- img.src=s[0];box.prepend(img)})();
-
-/* stats, derived from the data below */
-const pre=C.publications.filter(p=>p.status==="Preprint").length, sub=C.publications.filter(p=>p.status!=="Preprint").length;
-const stats=[[pre,"Preprints posted on medRxiv"],[sub,"Manuscripts submitted or in preparation"],[C.conferences.length,"Conferences and seminars"],[C.certs.length,"Certifications and trainings"],[C.memberships.length,"Society memberships"],[C.awards.length,"Honours and awards"]];
-$("stats").innerHTML=stats.map(s=>`<div class="stat"><strong data-n="${s[0]}">0</strong><span>${esc(s[1])}</span></div>`).join("");
-
-/* cards */
-const tags=a=>`<div class="tags">${a.map(t=>`<i>${esc(t)}</i>`).join("")}</div>`;
-$("interests").innerHTML=C.interests.map(i=>`<div class="card"><h3>${esc(i.title)}</h3><p>${esc(i.text)}</p>${tags(i.tags)}</div>`).join("");
-$("projects").innerHTML=C.projects.map(p=>`<div class="card"><span class="when">${esc(p.when)}</span><h3>${esc(p.title)}</h3><p>${esc(p.who)}</p>${tags([p.kind])}</div>`).join("");
-$("confGrid").innerHTML=C.conferences.map(c=>`<div class="card"><span class="when">${esc(c.when)}</span><h3>${esc(c.title)}</h3><p>${esc(c.place)}</p>${c.posters.length?`<ul>${c.posters.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>`:""}${c.note?`<p>${esc(c.note)}</p>`:""}${c.link?`<div class="lk"><a href="${esc(c.link)}"${ext(c.link)}>View on LinkedIn</a></div>`:""}</div>`).join("");
-$("awardGrid").innerHTML=C.awards.map(a=>`<div class="card"><span class="when">${esc(a.when)}</span><h3>${esc(a.title)}</h3><p>${esc(a.text)}</p><div class="lk">${a.links.map(l=>`<a href="${esc(l[1])}"${ext(l[1])}>${esc(l[0])}</a>`).join("")}</div></div>`).join("");
-$("certGrid").innerHTML=C.certs.map(c=>`<div class="card"><span class="when">${esc(c.when)}</span><h3>${esc(c.title)}</h3><p>${esc(c.org)}</p></div>`).join("");
-$("member").innerHTML=C.memberships.map(m=>`<div class="card" style="padding:1.05rem 1.3rem"><h3 style="font-size:.9rem">${esc(m[0])}</h3><p>${esc(m[1])}</p></div>`).join("");
-$("skillTags").innerHTML=C.skills.map(s=>`<i style="font-style:normal;font-size:.9rem;padding:.4rem .9rem;border:1px solid var(--line);border-radius:999px;background:var(--glass)">${esc(s)}</i>`).join("");
-
-/* timelines */
-$("edu").innerHTML=C.education.map(e=>`<div><small>${esc(e.when)}</small><h3>${esc(e.title)}</h3><p>${esc(e.place)}<br>${esc(e.detail)}${e.link?` <a href="${esc(e.link)}"${ext(e.link)} style="color:var(--ice)">Website</a>`:""}</p></div>`).join("");
-$("exp").innerHTML=C.experience.map(e=>`<div><small>${esc(e.when)}</small><h3>${esc(e.title)}</h3><p>${esc(e.place)}${e.link?` · <a href="${esc(e.link)}"${ext(e.link)} style="color:var(--ice)">Website</a>`:""}</p><ul>${e.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
-$("gpa").innerHTML=C.gpa.map(g=>`<div><b>${g[1]}</b><em style="height:${(g[1]/4*100).toFixed(0)}%"></em>${g[0]}</div>`).join("");
-
-/* languages (CEFR) */
-$("mother").textContent=C.mother;
-const lv=l=>"A1 A2 B1 B2 C1 C2".split(" ").indexOf(l)+1;
-$("langs").innerHTML=C.languages.map(L=>`<b style="color:var(--ink);font-weight:600">${esc(L[0])}</b>`+C.cols.map((c,i)=>`<div><span>${esc(c)}</span><span class="seg" title="${L[1][i]}">${[1,2,3,4,5,6].map(n=>`<i class="${n<=lv(L[1][i])?"f":""}"></i>`).join("")}</span></div>`).join("")).join("");
-
-/* publications: search + status filter */
-$("ty").innerHTML=["All statuses",...new Set(C.publications.map(p=>p.status))].map(t=>`<option>${esc(t)}</option>`).join("");
-function pubs(){const q=$("q").value.toLowerCase(),t=$("ty").value;
- const r=C.publications.filter(p=>(t==="All statuses"||p.status===t)&&(p.title+p.authors+p.venue+p.kind).toLowerCase().includes(q));
- $("pubList").innerHTML=r.map(p=>{const au=esc(p.authors).replace(esc(C.authorName),`<b>${esc(C.authorName)}</b>`);
-  const ti=p.link?`<a href="${esc(p.link)}"${ext(p.link)}>${esc(p.title)}</a>`:esc(p.title);
-  const cl=p.status==="Preprint"?"ok":p.status==="Submitted"?"sub2":"";
-  return `<article class="pub"><div class="yr">${esc(p.when)}</div><div><h3>${ti}</h3><div><span class="tg ${cl}">${esc(p.status)}</span><span class="tg" style="border-color:var(--line);color:var(--mute)">${esc(p.kind)}</span></div>${au?`<div class="au">${au}</div>`:""}<div class="ve">${esc(p.venue)}</div></div></article>`}).join("")||"<p class='note'>No matching publications.</p>";
- $("pubCount").textContent=r.length+" of "+C.publications.length+" shown"}
-$("q").addEventListener("input",pubs);$("ty").addEventListener("change",pubs);pubs();
-
-/* optional GitHub section */
-if(C.github)(async()=>{$("code").hidden=false;
- const draw=r=>$("repos").innerHTML=r.map(x=>`<a class="card" href="${esc(x.html_url)}" target="_blank" rel="noopener"><h3>${esc(x.name)}</h3><p>${esc(x.description||"No description yet.")}</p><div class="meta">${x.language?`<span><i class="dot"></i>${esc(x.language)}</span>`:""}<span>★ ${x.stargazers_count||0}</span></div></a>`).join("");
- try{const rs=await fetch(`https://api.github.com/users/${C.github}/repos?per_page=100&sort=updated`).then(r=>{if(!r.ok)throw 0;return r.json()});
-  draw(rs.filter(r=>!r.fork).sort((a,b)=>b.stargazers_count-a.stargazers_count||new Date(b.pushed_at)-new Date(a.pushed_at)).slice(0,C.maxRepos))}
- catch(e){$("rnote").textContent="Could not load GitHub data right now."}})();
-
-/* typing effect */
-(function(){const el=$("typed"),w=C.words;let i=0,j=0,del=0;
- if(matchMedia("(prefers-reduced-motion: reduce)").matches){el.textContent=w[0];el.style.borderRight="0";return}
- (function tick(){const s=w[i];j+=del?-1:1;el.textContent=s.slice(0,j)||"\u00a0";let t=del?40:80;
-  if(!del&&j===s.length){del=1;t=1400}else if(del&&j===0){del=0;i=(i+1)%w.length;t=300}setTimeout(tick,t)})()})();
-
-/* scroll: progress bar, back-to-top, active nav, counters */
-const links=[...document.querySelectorAll("#menu a")];
-addEventListener("scroll",()=>{const h=document.documentElement;$("bar").style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+"%";$("top").classList.toggle("show",h.scrollTop>700)},{passive:true});
-$("top").onclick=()=>scrollTo({top:0});
-secs.forEach(s=>{const el=$(s[0]);if(!el)return;new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+s[0]))}),{rootMargin:"-45% 0px -50% 0px"}).observe(el)});
-document.querySelectorAll("[data-n]").forEach(el=>{new IntersectionObserver((es,o)=>es.forEach(e=>{if(!e.isIntersecting)return;o.disconnect();const n=+el.dataset.n,t0=performance.now();(function f(t){const p=Math.min((t-t0)/1100,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)})).observe(el)});
-
-/* theme toggle */
-$("theme").onclick=()=>{const d=document.documentElement,dark=getComputedStyle(d).getPropertyValue("--bg").trim()==="#050716";d.dataset.theme=dark?"light":"dark"};
-
-/* card spotlight */
-document.addEventListener("pointermove",e=>{const c=e.target.closest&&e.target.closest(".card");if(!c)return;const b=c.getBoundingClientRect();c.style.setProperty("--mx",(e.clientX-b.left)+"px");c.style.setProperty("--my",(e.clientY-b.top)+"px")});
-
-/* neurons firing in the background */
-(function(){const cv=$("net"),ctx=cv.getContext("2d"),still=matchMedia("(prefers-reduced-motion: reduce)").matches,dpr=Math.min(devicePixelRatio||1,2);
- let w,h,pts=[],sp=[],m={x:-9999,y:-9999};const V=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
- function size(){w=innerWidth;h=innerHeight;cv.width=w*dpr;cv.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);pts=Array.from({length:Math.min(95,Math.floor(w*h/16000))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,f:0}));sp=[]}
- const fire=a=>{a.f=1;pts.filter(b=>b!==a&&Math.hypot(a.x-b.x,a.y-b.y)<130).slice(0,3).forEach(b=>sp.push({a,b,t:0}))};
- function frame(){ctx.clearRect(0,0,w,h);const c=V("--ice"),hot=V("--flare");
-  for(const p of pts){if(!still){const dx=p.x-m.x,dy=p.y-m.y,d=Math.hypot(dx,dy);if(d<150){p.vx+=dx/d*.03;p.vy+=dy/d*.03;if(d<60&&p.f<.1&&Math.random()<.2)fire(p)}p.vx*=.99;p.vy*=.99;p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;p.f*=.94}}
-  ctx.strokeStyle=c;ctx.lineWidth=1;
-  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<130){ctx.globalAlpha=(1-d/130)*.28;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()}}
-  for(const p of pts){ctx.globalAlpha=.5+p.f*.5;ctx.fillStyle=p.f>.2?hot:c;ctx.beginPath();ctx.arc(p.x,p.y,1.6+p.f*3,0,6.283);ctx.fill()}
-  if(!still){if(Math.random()<.04&&pts.length)fire(pts[Math.random()*pts.length|0]);
-   sp=sp.filter(s=>{s.t+=.03;ctx.globalAlpha=.9;ctx.fillStyle=hot;ctx.beginPath();ctx.arc(s.a.x+(s.b.x-s.a.x)*s.t,s.a.y+(s.b.y-s.a.y)*s.t,2.4,0,6.283);ctx.fill();if(s.t>=1){Math.random()<.55?fire(s.b):s.b.f=.7;return false}return true})}
-  ctx.globalAlpha=1;if(!still)requestAnimationFrame(frame)}
- addEventListener("pointermove",e=>{m.x=e.clientX;m.y=e.clientY});addEventListener("resize",()=>{size();if(still)frame()});size();frame()})();
-</script>
+<script src="data.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

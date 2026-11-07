@@ -5,7 +5,7 @@ const CONFIG={
  cv:"",                          // e.g. "cv.pdf" (upload it next to index.html) to show a Download CV button
  email:"abdullahalrafi.ustc@gmail.com",
  social:[{label:"LinkedIn",url:"https://www.linkedin.com/in/abdullahalraafi/"},{label:"Blog",url:"https://abdullah-rafi.blogspot.com/"}],
- role:"BSc student in Biochemistry and Biotechnology",
+ role:"Researcher in Biochemistry and Biotechnology",
  affiliation:"University of Science and Technology Chittagong (USTC), Bangladesh",
  words:["neurobiology","bioinformatics","drug design","neuroinflammation"],
  pitch:"I aim to contribute to innovative healthcare solutions through research, collaboration and science communication.",
@@ -27,7 +27,7 @@ const CONFIG={
   {when:"In preparation",status:"In preparation",kind:"Review article",title:"Emerging Insights into Neuroinflammation in Cerebrovascular Diseases: The Role of Microglia, Astrocytes, and Cytokine Cascades",authors:"",venue:"Supervised by Dr. Mohammad Shahangir Biswas"},
   {when:"In preparation",status:"In preparation",kind:"Review article",title:"Recent Advances in the Diagnosis and Management of Neurodegenerative Diseases",authors:"",venue:"Supervised by Dr. Mohammad Shahangir Biswas"}],
  education:[
-  {when:"01/01/2024 – current",title:"BSc in Biochemistry and Biotechnology",place:"University of Science and Technology Chittagong, Chattogram",detail:"CGPA 3.60 / 4.00 (average of semesters 1–4). EQF level 6.",link:"https://ustc.ac.bd/"},
+  {when:"01/01/2024 – current",title:"Researcher in Biochemistry and Biotechnology",place:"University of Science and Technology Chittagong, Chattogram",detail:"CGPA 3.60 / 4.00 (average of semesters 1–4). EQF level 6.",link:"https://ustc.ac.bd/"},
   {when:"01/06/2019 – 01/06/2021",title:"Higher School Certificate (HSC), Science",place:"Islamia University College Chittagong",detail:"GPA 4.75. EQF level 4."},
   {when:"Secondary",title:"Secondary School Certificate (SSC), Science",place:"Chittagong Government High School",detail:"GPA 4.67. EQF level 2."}],
  gpa:[["1st",3.75],["2nd",3.75],["3rd",3.63],["4th",3.29]],
